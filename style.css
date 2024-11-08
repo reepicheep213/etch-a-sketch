@@ -1,0 +1,15 @@
+#gridContainer, button, breakElement {
+  display: flex; 
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+#gridContainer {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+#initialGrid {
+  width: 6.25%;
+}
