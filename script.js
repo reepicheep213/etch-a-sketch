@@ -1,13 +1,23 @@
 const gridContainer = document.querySelector("#gridContainer");
 
+function randomInt(max) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
+function randomRgbColor() {
+  let r = randomInt(255);
+  let g = randomInt(255);
+  let b = randomInt(255);
+  return `rgb(${r}, ${g}, ${b})`;
+} 
+
 for (let i = 0; i < 16 ** 2; i++) {
   const initialGrid = document.createElement("div");
-  // initialGrid.classList.add("grid");
   initialGrid.id = "initialGrid";
   gridContainer.appendChild(initialGrid);
 
   initialGrid.addEventListener("mouseover", () => {
-    initialGrid.style.backgroundColor = "dodgerblue";
+    initialGrid.style.backgroundColor = randomRgbColor();
   });
 }
 
@@ -40,13 +50,12 @@ button.addEventListener("click", () => {
 
     for (let i = 0; i < gridNum ** 2; i++) {
       const newGrid = document.createElement("div");
-      // newGrid.classList.add("grid");
       newGrid.style.width = `${squareSize}px`;
       newGrid.style.height = `${squareSize}px`;
       
       gridContainer.appendChild(newGrid);
       newGrid.addEventListener("mouseover", () => {
-        newGrid.style.backgroundColor = "dodgerblue";
+        newGrid.style.backgroundColor = randomRgbColor();
       });
     }
   }
