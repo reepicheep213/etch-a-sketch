@@ -1,15 +1,21 @@
-#gridContainer, button, breakElement {
+#gridContainer {
   display: flex; 
   flex-wrap: wrap;
   margin: auto;
-}
-
-#gridContainer {
   width: 500px;
   height: 500px;
   border: 1px solid black;
 }
 
-#initialGrid {
+.btnContainer {
+  display: flex; 
+  justify-content: center;
+}
+
+button {
+  margin: 2%;
+}
+
+.initialGrid {
   width: 6.25%;
 }
